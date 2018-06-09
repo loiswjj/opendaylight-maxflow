@@ -1,0 +1,28 @@
+module maxflow {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:maxflow";
+    prefix "maxflow";
+
+    revision "2015-01-05" {
+        description "Initial revision of maxflow model";
+    }
+    
+    rpc max-flow {
+    	input {
+    		leaf source{
+    			type string;
+    		}
+    		leaf destination{
+    			type string;
+    		}
+    		leaf MaxBandwidth{
+    			type string;
+    		}
+    	}
+    	output {
+    		leaf result {
+    			type string;
+    		}
+    	}
+    }
+}
